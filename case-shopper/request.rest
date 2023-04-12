@@ -1,0 +1,47 @@
+GET http://localhost:3000/stock/products
+
+###
+GET http://localhost:3000/purchase/customers-orders/:name
+
+###
+POST http://localhost:3000/purchase/create-product-list
+Content-Type: application/json
+
+{
+    "products" : [
+        {
+            "id_product" : 25,
+            "name_product" : "ROLO DE PAPEL ALUMÍNIO WYDA 30CM X 75M" ,
+            "qty_product" : 5,
+            "tot_price" : 28.95,
+            "date" : "2023/03/04",
+            "customer_name" : "Lucas"
+        },
+
+        {
+            "id_product" : 26,
+            "name_product" : "FILME DE PVC PRATSY 15M",
+            "qty_product" : 10,
+            "tot_price" : 43.9,
+            "date" : "2023/03/04",
+            "customer_name" : "Lucas"
+        }
+    ]
+}
+
+###
+PUT http://localhost:3000/purchase/update-purchase-product
+Content-Type: application/json
+
+{
+    "id" : 1680559416094 ,
+    "qty_product" : 19
+}
+
+###
+DELETE http://localhost:3000/purchase/delete-order-product/:id
+
+
+
+
+
